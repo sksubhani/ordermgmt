@@ -18,12 +18,12 @@ public class Productline implements Serializable {
 	@Id
 	private String productLine;
 
-	@Lob
-	private String htmlDescription;
+	/*@Lob
+	private String htmlDescription;*/
 
-	@Lob
+	/*@Lob
 	private byte[] image;
-
+*/
 	private String textDescription;
 
 	//bi-directional many-to-one association to Product
@@ -41,22 +41,22 @@ public class Productline implements Serializable {
 		this.productLine = productLine;
 	}
 
-	public String getHtmlDescription() {
+	/*public String getHtmlDescription() {
 		return this.htmlDescription;
 	}
 
 	public void setHtmlDescription(String htmlDescription) {
 		this.htmlDescription = htmlDescription;
 	}
-
-	public byte[] getImage() {
+*/
+	/*public byte[] getImage() {
 		return this.image;
 	}
 
 	public void setImage(byte[] image) {
 		this.image = image;
 	}
-
+*/
 	public String getTextDescription() {
 		return this.textDescription;
 	}

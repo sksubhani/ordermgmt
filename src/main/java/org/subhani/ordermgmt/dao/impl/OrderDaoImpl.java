@@ -16,11 +16,9 @@ public class OrderDaoImpl implements OrderDao {
 	@PersistenceContext
 	private EntityManager entityManager;
 	
-	
 	public List<Order> getOrders() {
-		Query query = entityManager.createQuery("SELECT a FROM ORDERS a");
-		
-		return null;
+		Query query = entityManager.createQuery("SELECT a FROM Order a");
+		return query.getResultList();
 	}
 
 	

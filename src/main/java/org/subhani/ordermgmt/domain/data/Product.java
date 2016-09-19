@@ -23,8 +23,8 @@ public class Product implements Serializable {
 
 	private BigDecimal msrp;
 
-	@Lob
-	private String productDescription;
+	/*@Lob
+	private String productDescription;*/
 
 	private String productName;
 
@@ -40,7 +40,7 @@ public class Product implements Serializable {
 
 	//bi-directional many-to-one association to Productline
 	@ManyToOne
-	@JoinColumn(name="productLine")
+	@JoinColumn(name="productLine",insertable = false,updatable = false)
 	private Productline productline;
 
 	public Product() {
@@ -70,14 +70,14 @@ public class Product implements Serializable {
 		this.msrp = msrp;
 	}
 
-	public String getProductDescription() {
+	/*public String getProductDescription() {
 		return this.productDescription;
 	}
 
 	public void setProductDescription(String productDescription) {
 		this.productDescription = productDescription;
 	}
-
+*/
 	public String getProductName() {
 		return this.productName;
 	}

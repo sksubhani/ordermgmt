@@ -19,8 +19,8 @@ public class Order implements Serializable {
 	@Id
 	private int orderNumber;
 
-	@Lob
-	private String comments;
+	/*@Lob
+	private String comments;*/
 
 	@Temporal(TemporalType.DATE)
 	private Date orderDate;
@@ -39,7 +39,7 @@ public class Order implements Serializable {
 
 	//bi-directional many-to-one association to Customer
 	@ManyToOne
-	@JoinColumn(name="customerNumber")
+	@JoinColumn(name="customerNumber",insertable = false,updatable = false)
 	private Customer customer;
 
 	public Order() {
@@ -53,14 +53,14 @@ public class Order implements Serializable {
 		this.orderNumber = orderNumber;
 	}
 
-	public String getComments() {
+	/*public String getComments() {
 		return this.comments;
 	}
 
 	public void setComments(String comments) {
 		this.comments = comments;
 	}
-
+*/
 	public Date getOrderDate() {
 		return this.orderDate;
 	}
