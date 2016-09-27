@@ -2,6 +2,7 @@ package org.subhani.ordermgmt.service;
 
 import java.util.List;
 
+import org.springframework.stereotype.Service;
 import org.subhani.ordermgmt.domain.data.Customer;
 
 /**
@@ -9,6 +10,7 @@ import org.subhani.ordermgmt.domain.data.Customer;
  * @author Subhani
  *
  */
+@Service
 public interface CustomerService {
 	
 	/**

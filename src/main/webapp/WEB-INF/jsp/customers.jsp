@@ -27,6 +27,8 @@
 	   			
 	   			// Selected row with the customer to fetch complete customer record.
 	   			var customerSelected = ($(this).find(".customerNumber").html());
+	   			
+	   			// I can use this selected record later for details.
 	            
 	   		});
 	   		
@@ -96,7 +98,7 @@
 				<td>&nbsp; </td>
 			</tr>
 			
-			<!-- Display information using Bootstrap built in class. -->
+			<!-- Display information using Bootstrap built in "info" style class. -->
 			<tr>
 				<td class="alert alert-info">
 					<i> <b> Note: </b> </i> Please use the 'Search:' filter available on the top right to filter the results. <br>

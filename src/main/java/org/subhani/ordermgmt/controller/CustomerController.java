@@ -27,7 +27,8 @@ public class CustomerController {
 	
 	@Autowired
 	CustomerService customerService;
-	
+
+
 	/**
 	 * Get all customers from the database.
 	 * @return ModelAndView
@@ -82,4 +83,13 @@ public class CustomerController {
 
 	}
 
+	
+	public CustomerService getCustomerService() {
+		return customerService;
+	}
+
+
+	public void setCustomerService(CustomerService customerService) {
+		this.customerService = customerService;
+	}
 }
