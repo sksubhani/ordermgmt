@@ -64,3 +64,5 @@ http://localhost:8080/ordermgmt/customers/cities/Nantes
 Retrieve all avaialble Orders: <br>
 http://localhost:8080/ordermgmt/orders/all
 
+Retrieve all Orders: <br>
+http://localhost:8080/ordermgmt/orders
