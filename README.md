@@ -1,4 +1,4 @@
-# ordermgmt
+# ordermgmt (Order Management)
 A Spring MVC, JPA, Hibernate and MySQL Example <br> <br>
 
 This is a sample Order Management application showcasing the use of below mentioned technologies.  <br>
@@ -34,7 +34,7 @@ The database with tables and data can be simply downloaded from http://www.mysql
 
 <tr>
 <td> <b> Testing </b>: </td>
-<td> JUnit </td>
+<td> JUnit, EasyMock </td>
 </tr>
 
 <tr>
