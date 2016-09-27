@@ -2,6 +2,8 @@ package org.subhani.ordermgmt.controller;
 
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -21,6 +23,8 @@ import org.subhani.ordermgmt.service.CustomerService;
 @RequestMapping( "/customers" )
 public class CustomerController {
 	
+	private static final Logger logger = LoggerFactory.getLogger(CustomerController.class);
+	
 	@Autowired
 	CustomerService customerService;
 	
@@ -31,6 +35,7 @@ public class CustomerController {
 	@RequestMapping(method = RequestMethod.GET)
 	public ModelAndView getCustomers() {
 		
+		logger.debug("Request received for to get all customers." );
 		ModelAndView modelAndView = new ModelAndView();
 		List<Customer> customers = customerService.getCustomers();
 		modelAndView.addObject("pageTitle", "All Customers");
@@ -48,6 +53,7 @@ public class CustomerController {
 	@RequestMapping( value = "/{customerNumber}", method = RequestMethod.GET)
 	public ModelAndView getCustomersByCustomerNumber(@PathVariable Integer customerNumber) {		
 		
+		logger.debug("Request received for to get a customer details for customer: " + customerNumber);
 		ModelAndView modelAndView = new ModelAndView();
 		List<Customer> customers = customerService.getCustomersByCustomerNumber(customerNumber);
 		modelAndView.addObject("pageTitle", "Customers Details of Customer Number " + customerNumber);
@@ -66,6 +72,7 @@ public class CustomerController {
 	@RequestMapping( value = "/cities/{cityName}", method = RequestMethod.GET)
 	public ModelAndView getCustomersByCity(@PathVariable String cityName) {		
 		
+		logger.debug("Request received for to get all customers in the city: " + cityName);
 		ModelAndView modelAndView = new ModelAndView();
 		List<Customer> customers = customerService.getCustomersByCity(cityName);
 		modelAndView.addObject("pageTitle", "Customers in " + cityName);
