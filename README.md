@@ -10,21 +10,46 @@ There are more tables in the database which we can use for our demo in later par
 Additional configuration info:
 The database with tables and data can be simply downloaded from http://www.mysqltutorial.org/mysql-sample-database.aspx and configure and keep it ready to use.
 
+<table>
 
-<b> User Interface </b>:  HTML, Bootstrap, CSS, JQuery, JQuery Plugins - Data Tables, Java Script, JSP (Java Server Pages)
+ <tr>
+  <td> <b> User Interface </b>: </td>
+   <td> HTML, Bootstrap, CSS, JQuery, JQuery Plugins - Data Tables, Java Script, JSP (Java Server Pages) </td>
+ </tr>
 
-<b> Middle Tier (Java / J2EE) </b>:  Java, J2EE, JPA (Java Persistence API),  Spring (Core, Context, MVC, REST),  Hibernate
+<tr>
+<td> <b> Middle Tier (Java / J2EE): </b>  </td>
+<td> Java, J2EE, JPA (Java Persistence API),  Spring (Core, Context, MVC, REST),  Hibernate </td>
+</tr>
 
-<b> Backend (Database) </b>: HQL / SQL, MySQL
+<tr>
+<td> <b> Backend (Database) </b>: </td>
+<td> HQL / SQL, MySQL </td>
+</tr>
 
-<b> Logging </b>:  SLF4J over Log4J
+<tr>
+<td> <b> Logging </b>:  </td>
+<td> SLF4J over Log4J </td>
+</tr>
 
-<b> Testing </b>: JUnit
+<tr>
+<td> <b> Testing </b>: </td>
+<td> JUnit </td>
+</tr>
 
-<b> Application / Web Server: </b> Tomcat8
+<tr>
+<td> <b> Application / Web Server: </b> </td>
+<td> Tomcat8 </td>
+</tr>
 
-<b> Source code repositoryu: </b> Github
-<br> <br><br>
+<tr>
+<td>  <b> Source code repository: </b> </td>
+<td> Github </td>
+</tr>
+
+</table>
+
+<br> 
 
 <b> Sample REST URIs: </b> <br>
 Retrieve all Customers:
