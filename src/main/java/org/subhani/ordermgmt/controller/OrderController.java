@@ -15,7 +15,9 @@ import java.util.List;
 
 
 /**
- * Created by dv57454 on 9/18/2016.
+ * 
+ * @author Subhani
+ *
  */
 @Controller
 @RequestMapping("/orders")
@@ -34,8 +36,7 @@ public class OrderController {
         model.addObject("orders", orders);
         model.setViewName("orders");
 
-        System.out.println("Inside Controller class");
         return model;
-        //return new ModelAndView("/index.jsp", "orders", orders);
+        //return new ModelAndView("/orders.jsp", "orders", orders);
     }
 }
