@@ -28,7 +28,7 @@ public class OrderController {
     @Autowired
     private OrderService orderService;
 
-    @RequestMapping(method = RequestMethod.GET)
+	@RequestMapping(method = RequestMethod.GET)
     public ModelAndView getOrders(ModelAndView model, HttpServletRequest request) {
 
         List<Order> orders = orderService.getOrders();
@@ -39,4 +39,13 @@ public class OrderController {
         return model;
         //return new ModelAndView("/orders.jsp", "orders", orders);
     }
+
+    public OrderService getOrderService() {
+		return orderService;
+	}
+
+	public void setOrderService(OrderService orderService) {
+		this.orderService = orderService;
+	}
+	
 }
