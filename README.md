@@ -52,15 +52,15 @@ The database with tables and data can be simply downloaded from http://www.mysql
 <br> 
 
 <b> Sample REST URIs: </b> <br>
-Retrieve all Customers:
+Retrieve all Customers: <br>
 http://localhost:8080/ordermgmt/customers
 
-Retrieve Customer by Customer Number:
+Retrieve Customer by Customer Number: <br>
 http://localhost:8080/ordermgmt/customers/119
 
-Retrieve all customers within a City:
+Retrieve all customers within a City: <br>
 http://localhost:8080/ordermgmt/customers/cities/Nantes
 
-Retrieve all avaialble Orders:
+Retrieve all avaialble Orders: <br>
 http://localhost:8080/ordermgmt/orders/all
 
