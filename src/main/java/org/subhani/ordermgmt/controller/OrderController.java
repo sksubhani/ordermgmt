@@ -28,7 +28,7 @@ public class OrderController {
     @Autowired
     private OrderService orderService;
 
-    @RequestMapping(value = "/all", method = RequestMethod.GET)
+    @RequestMapping(method = RequestMethod.GET)
     public ModelAndView getOrders(ModelAndView model, HttpServletRequest request) {
 
         List<Order> orders = orderService.getOrders();

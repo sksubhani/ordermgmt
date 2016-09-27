@@ -1,40 +1,79 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%--
-  Created by IntelliJ IDEA.
-  User: dv57454
-  Date: 9/18/2016
-  Time: 6:13 PM
-  To change this template use File | Settings | File Templates.
---%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <html>
-<head>
-    <title>Title</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-</head>
-<body>
-Hello world!
+	<head>
+	    <title>Orders</title>
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.css">
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.js"></script>
+	    
+	    <script>
+	    
+	    $(document).ready( function () {
+	    	// Associating the data to the data table.
+	   		$('#ordersTable').DataTable();
 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h3 class="panel-title">Order Details </h3>
-    </div>
-    <div class="panel-body">
-        <table class="table">
-            <c:forEach var="order" items="${orders}">
-
-
-            <tr>
-                <td>Order Number : ${order.orderNumber} <br>
-                </td>
-                <td>Order Date : ${order.orderDate}</td>
-            </tr>
-            </c:forEach>
-    </div>
-
-</div>
-</div>
-
-
-</body>
+		} );
+		
+		</script>
+	
+	</head>
+	<body>
+	
+	<br><br>
+		
+		<!--  Placeholder for the dynamic page title. -->
+		<h1><div id="pageTitle" align="center" style="color: #05BBF7">Orders</div></h1><br>
+		
+		<!-- Display the customer data. -->
+		<table width="80%" align="center" >
+			
+			<tr>
+				<td>
+					<table id="ordersTable" align="left" class="table table-striped table-hover">
+			        	<thead id="orderListTableHeader" style="background-color: #83C8DE;">
+			        		<tr>
+			        			<th>Order Number</th>
+				        		<th>Order Date</th>
+				        		<th>Customer Number</th>
+				        		<th>Customer Phone</th>
+				        		<th>Shipped Date</th>
+				                <th>Status</th>
+			        		</tr>
+			        	</thead>
+			        	<tbody>
+				            <c:forEach var="order" items="${orders}" >
+				            <tr id="orderRow_${order.orderNumber}">
+				                <td class="orderNumber">${order.orderNumber}</td>
+				                <td>${order.orderDate}</td>
+				                <td>${order.customer.customerNumber}</td>
+				                <td>${order.customer.phone}</td>
+				                <td>${order.shippedDate}</td>
+				                <td>${order.status}</td>
+				            </tr>
+				            </c:forEach>
+			            </tbody>
+			       	</table>
+				</td>
+			</tr>
+			
+			<tr>
+				<td>&nbsp; </td>
+			</tr>
+			
+			<!-- Display information using Bootstrap built in class. -->
+			<tr>
+				<td class="alert alert-info">
+					<i> <b> Note: </b> </i> Please use the 'Search:' filter available on the top right to filter the results. <br>
+				</td>
+			</tr>
+			
+		</table>
+		<br>
+  	</body>
 </html>
